@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Location Chauffeur</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Section with Logo -->
+  <div class="top-section">
+    <img src="logo.png" alt="Logo" class="logo">
+  </div>
+
+  <!-- Navigation Section -->
+  <nav class="navigation">
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    <ul id="navList">
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="indexAL.html">Activités et Loisirs</a></li>
+      <li><a href="indexH.html">Hébergement</a></li>
+      <li><a href="#">Nous Contacter</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Découvrez le meilleur du tourisme avec <span>Location Chauffeur</span></h1>
+      <p>Transport, loisirs, hébergements – tout pour rendre votre séjour inoubliable.</p>
+      <a href="indexAL.html" class="btn-hero">Découvrir nos activités</a>
+    </div>
+  </section>
+
+  <!-- Header -->
+  <header>
+    <h2>Location Chauffeur & Tourisme</h2>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="content-container">
+
+      <!-- À propos section -->
+      <section class="packs-section">
+        <div class="apropos-section fade-in">
+          <div class="apropos-panel left-panel">
+            <h2>À propos de nos services</h2>
+            <p>
+              Nous sommes une compagnie dédiée au tourisme et à la location de chauffeurs privés.
+              Notre objectif est de vous offrir une expérience fluide et agréable, où chaque trajet devient une découverte.
+            </p>
+          </div>
+          <div class="apropos-panel right-panel">
+            <p>
+              Profitez d’activités variées : paintball, karting, visites guidées, et bien plus encore.
+              Nos offres spéciales pour la Coupe d’Afrique incluent transport, réservation et hébergement dans les meilleurs lieux.
+            </p>
+          </div>
+        </div>
+
+        <!-- Nos Packs -->
+        <h2 class="section-title">Nos Packs Touristiques</h2>
+        <div class="packs">
+          <div class="pack" id="packA" onclick="showDetails('A')">
+            <div class="pack-content">
+              <h3>Pack A - Standard</h3>
+              <p>Confort et efficacité pour vos trajets urbains.</p>
+            </div>
+          </div>
+
+          <div class="pack" id="packB" onclick="showDetails('B')">
+            <div class="pack-content">
+              <h3>Pack B - Familial</h3>
+              <p>Spacieux et convivial pour 4 personnes.</p>
+            </div>
+          </div>
+
+          <div class="pack" id="packC" onclick="showDetails('C')">
+            <div class="pack-content">
+              <h3>Pack C - Prestige</h3>
+              <p>Une expérience haut de gamme pour 2 personnes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Details Section -->
+        <div id="packDetails" class="pack-details hidden">
+          <h3>Détails du pack</h3>
+          <p id="detailsText">Sélectionnez un pack pour voir les détails.</p>
+        </div>
+      </section>
+
+      <!-- Aside for Videos -->
+      <aside>
+        <h3>Nos Vidéos</h3>
+        <div class="video-container">
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                  frameborder="0" allowfullscreen></iframe>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Location Chauffeur - Explorez, découvrez, voyagez avec nous.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function showDetails(pack) {
+      const details = {
+        A: "Le Pack A Standard inclut un chauffeur professionnel et un véhicule confortable pour vos trajets urbains.",
+        B: "Le Pack B Familial est idéal pour 4 personnes, avec un véhicule spacieux et toutes les commodités.",
+        C: "Le Pack C Prestige vous offre un service VIP : confort, discrétion et luxe pour deux personnes."
+      };
+      document.getElementById("packDetails").classList.remove("hidden");
+      document.getElementById("detailsText").textContent = details[pack];
+    }
+
+    // Responsive Menu
+    document.getElementById("menuToggle").addEventListener("click", () => {
+      document.getElementById("navList").classList.toggle("open");
+    });
+
+    // Fade-in on scroll
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
