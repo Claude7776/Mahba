@@ -33,7 +33,3 @@ Bienvenue sur le dépôt du site vitrine touristique **Location Chauffeur**. Ce 
 - Google Maps Embed API
 
 ## 📂 Structure du projet
-
-```bash
-/styles/ → Fichiers CSS et images de branding /videos/ → Vidéos utilisées en arrière-plan /galerie/ → Images des activités et excursions index.html → Page d'accueil activité.html → Activités et loisirs hébergement.html → Hébergements partenaires contact.html → Coordonnées et carte connexion.html → Accès organisateur (optionnel)
-```
