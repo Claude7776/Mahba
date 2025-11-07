@@ -12,6 +12,7 @@ Bienvenue sur le dépôt du site vitrine touristique **Location Chauffeur**. Ce 
 - Navigation fluide et responsive
 - Animation `fade-in` pour une expérience utilisateur dynamique
 - Intégration des logos et branding local
+- Bulle de démarrage de discussion Whatsapp
 
 ## 🧭 Pages disponibles
 
@@ -26,10 +27,10 @@ Bienvenue sur le dépôt du site vitrine touristique **Location Chauffeur**. Ce 
 ## 🛠️ Technologies utilisées
 
 - HTML5 / CSS3 / JavaScript
-- Flask (si backend activé)
+- Flask (si backend besoin à long terme)
 - Bootstrap (optionnel)
-- Docker (pour déploiement)
-- Telegram API (pour alertes organisateurs)
+- Docker (pour déploiement à l'avenir)
+- Whatsapp API (pour les messages)
 - Google Maps Embed API
 
 ## 📂 Structure du projet
