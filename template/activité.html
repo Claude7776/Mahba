@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activités et Loisirs - Location Chauffeur</title>
+  <link rel="stylesheet" href="/styles/styles.css" />
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.getElementById("menuToggle");
+      const navList = document.getElementById("navList");
+      toggle.addEventListener("click", () => {
+        navList.classList.toggle("open");
+      });
+
+      // Fade-in animation
+      const fadeElements = document.querySelectorAll(".fade-in");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      });
+      fadeElements.forEach((el) => observer.observe(el));
+    });
+  </script>
+</head>
+<body>
+  <!-- Top Section with Logo -->
+  <div class="top-section">
+    <img src="logo.png" alt="Logo" class="logo" />
+  </div>
+
+  <!-- Navigation Section -->
+  <nav class="navigation">
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    <ul id="navList">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="activité.html" class="active">Activités et Loisirs</a></li>
+      <li><a href="indexH.html">Hébergement</a></li>
+      <li><a href="contact.html">Nous Contacter</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h2>Activités et Loisirs</h2>
+    <p>Découvrez nos services et expériences pour enrichir votre séjour.</p>
+  </header>
+
+  <!-- Activités Section -->
+  <section class="apropos-section">
+    <div class="apropos-panel fade-in">
+      <h2>Visites Guidées</h2>
+      <p>Explorez les plus beaux sites touristiques avec nos chauffeurs expérimentés. Circuits personnalisés disponibles.</p>
+    </div>
+    <div class="apropos-panel right-panel fade-in">
+      <h2>Événements Privés</h2>
+      <p>Profitez d’un transport haut de gamme pour mariages, anniversaires, ou soirées VIP. Confort et élégance garantis.</p>
+    </div>
+    <div class="apropos-panel fade-in">
+      <h2>Excursions Nature</h2>
+      <p>Partez à la découverte de paysages naturels exceptionnels : montagnes, plages, forêts… en toute sérénité.</p>
+    </div>
+  </section>
+
+  <!-- Galerie Photo -->
+  <section>
+    <h3 class="section-title">Galerie</h3>
+    <div class="packs">
+      <div class="pack" id="packA">
+        <div class="pack-content">
+          <h3>Panorama Urbain</h3>
+          <img src="galerie1.jpg" alt="Ville" style="width:100%; border-radius:8px;" />
+        </div>
+      </div>
+      <div class="pack" id="packB">
+        <div class="pack-content">
+          <h3>Nature & Détente</h3>
+          <img src="galerie2.jpg" alt="Nature" style="width:100%; border-radius:8px;" />
+        </div>
+      </div>
+      <div class="pack" id="packC">
+        <div class="pack-content">
+          <h3>Événementiel</h3>
+          <img src="galerie3.jpg" alt="Événement" style="width:100%; border-radius:8px;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carte Interactive -->
+  <section style="margin-top:40px;">
+    <h3 class="section-title">Localisation</h3>
+    <div class="video-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.9999999999995!2d-6.849999999999999!3d33.971999999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b8b8b8b8b8b8b%3A0x123456789abcdef!2sRabat!5e0!3m2!1sfr!2sma!4v0000000000000"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- Formulaire de Réservation -->
+  <section style="margin-top:40px;">
+    <h3 class="section-title">Réserver une activité</h3>
+    <div class="apropos-panel fade-in">
+      <form>
+        <input type="text" placeholder="Votre nom" required /><br /><br />
+        <input type="email" placeholder="Votre email" required /><br /><br />
+        <select required>
+          <option value="">Choisissez une activité</option>
+          <option value="visite">Visite Guidée</option>
+          <option value="evenement">Événement Privé</option>
+          <option value="excursion">Excursion Nature</option>
+        </select><br /><br />
+        <textarea placeholder="Message ou demande spécifique" rows="5"></textarea><br /><br />
+        <button class="btn-hero" type="submit">Réserver</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Location Chauffeur. Tous droits réservés.
+  </footer>
+</body>
+</html>
