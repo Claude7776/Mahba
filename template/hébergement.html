@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahba - Hébergement</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Mahba Chauffeur Privé</h1>
+    <p>Découvrez le meilleur du tourisme avec Location Chauffeur</p>
+  </header>
+
+  <!-- Hero Section with Video Background -->
+  <section class="hero-video">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="/styles/images/vidéo/8345154-uhd_2160_3840_25fps.mp4" type="video/mp4">
+      Votre navigateur ne supporte pas la vidéo HTML5.
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h2>Hébergement & Services</h2>
+      <p>Confort, élégance et sérénité pour chaque étape de votre voyage.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="content">
+    <section class="card fade-in">
+      <h3>🏨 Nos hébergements partenaires</h3>
+      <p>Nous collaborons avec des hôtels 4 et 5 étoiles pour garantir votre confort durant vos déplacements. Chaque réservation inclut le transfert avec chauffeur privé.</p>
+    </section>
+
+    <section class="card fade-in">
+      <h3>🛎️ Services inclus</h3>
+      <ul>
+        <li>Transfert aéroport avec accueil personnalisé</li>
+        <li>Chauffeur bilingue et discret</li>
+        <li>Wi-Fi et rafraîchissements à bord</li>
+        <li>Assistance 24h/24</li>
+      </ul>
+    </section>
+
+    <section class="card fade-in">
+      <h3>📅 Réserver maintenant</h3>
+      <form action="reservation.php" method="POST">
+        <label for="nom">Nom complet :</label><br>
+        <input type="text" id="nom" name="nom" required><br><br>
+
+        <label for="email">Email :</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="date">Date d’arrivée :</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <input type="submit" value="Réserver" class="btn-hero">
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Mahba Chauffeur Privé – Tous droits réservés
+  </footer>
+
+  <!-- Fade-in animation script -->
+  <script>
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
