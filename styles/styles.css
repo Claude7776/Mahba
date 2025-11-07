@@ -328,3 +328,83 @@ footer {
   justify-content: center;
   gap: 15px;
 }
+
+/* Coupe d’Afrique – Réservation */
+.card h3 {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #006837; /* vert CAN */
+  margin-bottom: 10px;
+}
+
+.card input,
+.card select,
+.card textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.card label {
+  font-weight: 600;
+  color: #d21034; /* rouge CAN */
+}
+
+.card .btn-hero {
+  background: linear-gradient(145deg, #fcd116, #d21034); /* jaune → rouge */
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 12px 28px;
+  transition: 0.3s;
+}
+
+.card .btn-hero:hover {
+  background: linear-gradient(145deg, #d21034, #fcd116);
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+/* Modale Coupe d’Afrique */
+.modal-content {
+  background: linear-gradient(135deg, #006837, #fcd116); /* vert → jaune */
+  color: white;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.modal-content h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.modal-content p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.modal-actions button {
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+#confirmSend {
+  background-color: #d21034;
+  color: #fff;
+}
+
+#cancelSend {
+  background-color: #fff;
+  color: #333;
+}
