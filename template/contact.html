@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nous Contacter - Location Chauffeur</title>
+  <link rel="stylesheet" href="/styles/styles.css" />
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.getElementById("menuToggle");
+      const navList = document.getElementById("navList");
+      toggle.addEventListener("click", () => {
+        navList.classList.toggle("open");
+      });
+
+      const fadeElements = document.querySelectorAll(".fade-in");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      });
+      fadeElements.forEach((el) => observer.observe(el));
+    });
+  </script>
+</head>
+<body>
+  <!-- Top Section with Logo -->
+  <div class="top-section">
+    <img src="/styles/images/logo.png" alt="Logo" class="logo" />
+  </div>
+
+  <!-- Navigation Section -->
+  <nav class="navigation">
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    <ul id="navList">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="activité.html">Activités et Loisirs</a></li>
+      <li><a href="hébergement.html  
+            ">Hébergement</a></li>
+      <li><a href="contact.html" class="active">Nous Contacter</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Video Section -->
+  <section class="video-hero">
+    <video autoplay muted loop playsinline>
+      <source src="/styles/images/vidéo/CAN 2025 au Maroc  Bienvenue #maroc #morocco.mp4" type="video/mp4" />
+      Votre navigateur ne supporte pas la vidéo.
+    </video>
+    <div class="video-overlay"></div>
+    <div class="video-text">
+      <h1><span class="africa-flare">Nous Contacter</span></h1>
+      <p>Une équipe à votre écoute, inspirée par l’énergie de l’Afrique.</p>
+    </div>
+  </section>
+
+  <!-- Informations de contact -->
+  <section class="apropos-section">
+    <div class="apropos-panel fade-in">
+      <h2>Adresse</h2>
+      <p>123 Rue des Vacances<br>75000 Paris, France</p>
+    </div>
+    <div class="apropos-panel right-panel fade-in">
+      <h2>Contact</h2>
+      <p>Email : contact@locationchauffeur.fr<br>Téléphone : +33 1 23 45 67 89</p>
+    </div>
+    <div class="apropos-panel fade-in">
+      <h2>Horaires</h2>
+      <p>Lundi à Samedi : 8h - 20h<br>Dimanche : Fermé</p>
+    </div>
+  </section>
+
+  <!-- Carte interactive -->
+  <section style="margin-top:40px;">
+    <h3 class="section-title">Localisation</h3>
+    <div class="video-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.9999999999995!2d-6.849999999999999!3d33.971999999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b8b8b8b8b8b8b%3A0x123456789abcdef!2sRabat!5e0!3m2!1sfr!2sma!4v0000000000000"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+      ></iframe>
+    </div>
+  </section>
+  <!-- Header -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("whatsappForm");
+    const modal = document.getElementById("confirmationModal");
+    const messagePreview = document.getElementById("messagePreview");
+    const confirmSend = document.getElementById("confirmSend");
+    const cancelSend = document.getElementById("cancelSend");
+
+    let whatsappURL = "";
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nom = document.getElementById("nom").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const date = document.getElementById("date").value;
+
+      if (!nom || !email || !date) {
+        alert("Veuillez remplir tous les champs.");
+        return;
+      }
+
+      const message = `Bonjour, je souhaite réserver avec les informations suivantes :
+Nom : ${nom}
+Email : ${email}
+Date d’arrivée : ${date}`;
+
+      const phone = "212690565512";
+      whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+      messagePreview.textContent = message;
+      modal.style.display = "flex";
+    });
+
+    confirmSend.addEventListener("click", function () {
+      window.open(whatsappURL, "_blank");
+      modal.style.display = "none";
+    });
+
+    cancelSend.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  });
+</script>  <header class="header-hero">
+    <script>
+      const header = document.querySelector('.header-hero');
+      header.style.backgroundImage = "url('/styles/images/hero-bg.jpg')";
+</script>
+    <h1>Mahba Chauffeur Privé</h1>
+    <p>Découvrez le meilleur du tourisme avec Location Chauffeur</p>
+  </header>
+
+  <!-- Hero Section with Video Background -->
+  <section class="hero-video">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="/styles/images/vidéo/CAN 2025 au Maroc  Bienvenue #maroc #morocco.mp4" type="video/mp4">
+      Votre navigateur ne supporte pas la vidéo HTML5.
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h2>Hébergement & Services</h2>
+      <p>Confort, élégance et sérénité pour chaque étape de votre voyage.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="content">
+    <section class="card fade-in">
+      <h3>Nos meilleurs Chauffeurs Vous accompagne tout au long de votre voyage</h3>
+      <p>Partout où vous allez, nos chauffeurs sont là pour vous.</p>
+    </section>
+
+    <section class="card fade-in">
+      <h3>Services inclus</h3>
+      <ul>
+        <li>Transfert aéroport avec accueil personnalisé</li>
+        <li>Chauffeur bilingue et discret</li>
+        <li>Wi-Fi et rafraîchissements à bord</li>
+        <li>Assistance 24h/24</li>
+      </ul>
+    </section>
+
+   <section class="card fade-in">
+  <h3>📅 Réserver maintenant</h3>
+  <form id="whatsappForm">
+    <label for="nom">Nom complet :</label><br>
+    <input type="text" id="nom" name="nom" required><br><br>
+
+    <label for="email">Email :</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="date">Date d’arrivée :</label><br>
+    <input type="date" id="date" name="date" required><br><br>
+
+    <button type="submit" class="btn-hero">Envoyer sur WhatsApp</button>
+  </form>
+</section>
+
+<!-- Modale de confirmation -->
+<div id="confirmationModal" class="modal">
+  <div class="modal-content">
+    <h3>Confirmer l’envoi</h3>
+    <p id="messagePreview"></p>
+    <div class="modal-actions">
+      <button id="confirmSend" class="btn-hero">Oui, envoyer</button>
+      <button id="cancelSend" class="btn-hero" style="background:#ccc; color:#333;">Annuler</button>
+    </div>
+  </div>
+</div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Location Chauffeur. Tous droits réservés.
+  </footer>
+</body>
+</html>

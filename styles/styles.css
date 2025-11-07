@@ -408,3 +408,30 @@ footer {
   background-color: #fff;
   color: #333;
 }
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 10px 0;
+}
+.slide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  background: #fff;
+  padding: 15px;
+  text-align: center;
+}
+.slide img,
+.slide video {
+  width: 100%;
+  border-radius: 8px;
+}
+.slide h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
