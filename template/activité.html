@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Activités et Loisirs - Location Chauffeur</title>
   <link rel="stylesheet" href="/styles/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const toggle = document.getElementById("menuToggle");
@@ -13,7 +14,6 @@
         navList.classList.toggle("open");
       });
 
-      // Fade-in animation
       const fadeElements = document.querySelectorAll(".fade-in");
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -25,6 +25,7 @@
   </script>
 </head>
 <body>
+
   <!-- Top Section with Logo -->
   <div class="top-section">
     <img src="/styles/images/logo.png" alt="Logo" class="logo" />
@@ -99,22 +100,14 @@
     </div>
   </section>
 
-  <!-- Formulaire de Réservation -->
+  <!-- Contact Direct -->
   <section style="margin-top:40px;">
     <h3 class="section-title">Réserver une activité</h3>
-    <div class="apropos-panel fade-in">
-      <form>
-        <input type="text" placeholder="Votre nom" required /><br /><br />
-        <input type="email" placeholder="Votre email" required /><br /><br />
-        <select required>
-          <option value="">Choisissez une activité</option>
-          <option value="visite">Visite Guidée</option>
-          <option value="evenement">Événement Privé</option>
-          <option value="excursion">Excursion Nature</option>
-        </select><br /><br />
-        <textarea placeholder="Message ou demande spécifique" rows="5"></textarea><br /><br />
-        <button class="btn-hero" type="submit">Réserver</button>
-      </form>
+    <div class="apropos-panel fade-in" style="text-align:center;">
+      <p>Contactez-nous directement pour réserver ou poser vos questions :</p>
+      <a href="https://wa.me/212690565512" target="_blank" class="btn-hero" style="margin:10px;">📱 WhatsApp</a>
+      <a href="tel:+212690565512" class="btn-hero" style="margin:10px;">📞 Appeler</a>
+      <a href="mailto:contact@locationchauffeur.ma" class="btn-hero" style="margin:10px;">✉️ Email</a>
     </div>
   </section>
 
@@ -122,5 +115,6 @@
   <footer>
     &copy; 2025 Location Chauffeur. Tous droits réservés.
   </footer>
+
 </body>
 </html>
