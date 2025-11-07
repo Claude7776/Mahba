@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accueil - Location Chauffeur</title>
   <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <!-- Top Section with Logo -->
@@ -60,29 +61,33 @@
         </div>
 
         <!-- Nos Packs -->
-        <h2 class="section-title">Nos Packs Touristiques</h2>
-        <div class="packs">
-          <div class="pack" id="packA" onclick="showDetails('A')">
-            <div class="pack-content">
-              <h3>Pack A - Standard</h3>
-              <p>Confort et efficacité pour vos trajets urbains.</p>
-            </div>
-          </div>
+<h2 class="section-title">Nos Packs Touristiques</h2>
+<div class="packs">
+  <div class="pack" id="packA" onclick="showDetails('A')">
+    <div class="pack-content">
+      <h3>Pack A - Standard</h3>
+      <p>Confort et efficacité pour vos trajets urbains.</p>
+      <p class="price">428 € / 4 708 MAD TTC</p>
+    </div>
+  </div>
 
-          <div class="pack" id="packB" onclick="showDetails('B')">
-            <div class="pack-content">
-              <h3>Pack B - Familial</h3>
-              <p>Spacieux et convivial pour 4 personnes.</p>
-            </div>
-          </div>
+  <div class="pack" id="packB" onclick="showDetails('B')">
+    <div class="pack-content">
+      <h3>Pack B - Familial</h3>
+      <p>Spacieux et convivial pour 4 personnes.</p>
+      <p class="price">800 € / 8 800 MAD TTC</p>
+    </div>
+  </div>
 
-          <div class="pack" id="packC" onclick="showDetails('C')">
-            <div class="pack-content">
-              <h3>Pack C - Prestige</h3>
-              <p>Une expérience haut de gamme pour 2 personnes.</p>
-            </div>
-          </div>
-        </div>
+  <div class="pack" id="packC" onclick="showDetails('C')">
+    <div class="pack-content">
+      <h3>Pack C - Prestige</h3>
+      <p>Une expérience haut de gamme pour 2 personnes.</p>
+      <p class="price">700 € / 7 700 MAD TTC</p>
+    </div>
+  </div>
+</div>
+
 
         <!-- Details Section -->
         <div id="packDetails" class="pack-details hidden">
@@ -105,9 +110,25 @@
   </main>
 
   <!-- Footer -->
-  <footer>
-    <p>© 2025 Location Chauffeur - Explorez, découvrez, voyagez avec nous.</p>
-  </footer>
+  <footer class="footer">
+  <p>© 2025 Location Chauffeur - Explorez, découvrez, voyagez avec nous.</p>
+  <p>Votre partenaire de confiance pour des trajets inoubliables à travers le Maroc.</p>
+  <p>Des packs adaptés à chaque besoin : confort urbain, escapades familiales ou expériences haut de gamme.</p>
+  <p>📞 <a href="tel:+212600000000">+212 6 00 00 00 00</a> | 📧 <a href="mailto:contact@locationchauffeur.ma">contact@locationchauffeur.ma</a></p>
+  <p>📍 Basés à Rabat, nous desservons toutes les grandes villes et régions touristiques.</p>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com/locationchauffeur" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/locationchauffeur" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/212600000000" target="_blank" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+</footer>
 
   <!-- JavaScript -->
   <script>
@@ -137,5 +158,10 @@
     }, { threshold: 0.2 });
     fadeEls.forEach(el => observer.observe(el));
   </script>
+  <!-- Bandeau WhatsApp Mobile -->
+<a href="https://wa.me/212690565512" class="whatsapp-banner" target="_blank" aria-label="Contactez-nous sur WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span>Discuter sur WhatsApp</span>
+</a>
 </body>
 </html>

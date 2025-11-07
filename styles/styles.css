@@ -260,6 +260,26 @@ footer {
   font-size: 0.95em;
 }
 
+.footer a {
+  color: #007B8A;
+  text-decoration: none;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.4rem;
+  color: #007B8A;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #005f6b;
+}
+
 .hero-video {
   position: relative;
   height: 400px;
@@ -436,4 +456,87 @@ footer {
 .slide h3 {
   margin-bottom: 10px;
   font-weight: 600;
+}
+
+.packs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pack {
+  flex: 1 1 300px;
+  max-width: 320px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.pack:hover {
+  transform: translateY(-5px);
+}
+
+.pack-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.pack-content p {
+  margin: 0.4rem 0;
+}
+
+.price {
+  font-weight: bold;
+  color: #007B8A;
+  font-size: 1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .packs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pack {
+    width: 90%;
+  }
+
+  .pack-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+}
+.whatsapp-banner {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-decoration: none;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-banner:hover {
+  background-color: #1DA851;
+}
+
+.whatsapp-banner i {
+  font-size: 1.2rem;
 }
