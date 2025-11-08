@@ -129,39 +129,11 @@
     </a>
   </div>
 </footer>
-
-  <!-- JavaScript -->
-  <script>
-    function showDetails(pack) {
-      const details = {
-        A: "Le Pack A Standard inclut un chauffeur professionnel et un véhicule confortable pour vos trajets urbains.",
-        B: "Le Pack B Familial est idéal pour 4 personnes, avec un véhicule spacieux et toutes les commodités.",
-        C: "Le Pack C Prestige vous offre un service VIP : confort, discrétion et luxe pour deux personnes."
-      };
-      document.getElementById("packDetails").classList.remove("hidden");
-      document.getElementById("detailsText").textContent = details[pack];
-    }
-
-    // Responsive Menu
-    document.getElementById("menuToggle").addEventListener("click", () => {
-      document.getElementById("navList").classList.toggle("open");
-    });
-
-    // Fade-in on scroll
-    const fadeEls = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
-    fadeEls.forEach(el => observer.observe(el));
-  </script>
   <!-- Bandeau WhatsApp Mobile -->
 <a href="https://wa.me/212690565512" class="whatsapp-banner" target="_blank" aria-label="Contactez-nous sur WhatsApp">
   <i class="fab fa-whatsapp"></i>
   <span>Discuter sur WhatsApp</span>
 </a>
+<script src="/scripts/main.js" defer></script>
 </body>
 </html>
