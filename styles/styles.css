@@ -1,33 +1,41 @@
-/* General */
+/* =======================
+   Base & Layout
+======================= */
 body {
-  font-family: "Poppins", Arial, sans-serif;
-  background-color: #fafafa;
-  color: #333;
-  padding: 0 80px;
+  font-family: "Inter", "Poppins", Arial, sans-serif;
+  background: linear-gradient(180deg, #f9f9f9 0%, #f0f4f8 100%);
+  color: #2a2a2a;
+  padding: 0 clamp(1rem, 5vw, 80px);
+  line-height: 1.6;
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 @media (max-width: 900px) {
   body { padding: 0 20px; }
 }
 
-/* Top Section */
-.top-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 0;
-}
 .logo {
   height: 200px;
-  max-width: 100%;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 50px;
 }
 
-/* Navigation */
+/* =======================
+   Navigation
+======================= */
 .navigation {
-  background-color: #111;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(17, 17, 17, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  margin: 1rem auto;
+  max-width: 1200px;
+  padding: 0.5rem 1rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease;
 }
 .navigation ul {
   list-style: none;
@@ -49,6 +57,8 @@ body {
   border-radius: 8px;
   transition: all 0.3s ease;
   background-color: transparent;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
 }
 .navigation a:hover {
   background: linear-gradient(145deg, #333, #555);
@@ -65,8 +75,6 @@ body {
   cursor: pointer;
   padding: 10px 15px;
 }
-
-/* Responsive nav */
 @media (max-width: 768px) {
   .menu-toggle { display: block; }
   .navigation ul {
@@ -82,32 +90,33 @@ body {
   }
 }
 
-/* Hero Section */
+/* =======================
+   Hero Section
+======================= */
 .hero {
+  padding: clamp(80px, 20vh, 160px) 1rem;
   background: url('/styles/images/stadeMoulay.jpeg') center/cover no-repeat;
-  border-radius: 15px;
-  padding: 100px 20px;
-  color: white;
-  text-align: center;
+  border-radius: 20px;
   position: relative;
-  overflow: hidden;
+  color: #fff;
 }
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
-  border-radius: 15px;
+  background: linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+  border-radius: 20px;
 }
 .hero-text {
   position: relative;
   z-index: 2;
   max-width: 700px;
   margin: 0 auto;
+  text-align: center;
 }
 .hero h1 {
-  font-size: 2em;
-  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
   line-height: 1.3;
 }
 .hero span {
@@ -115,7 +124,8 @@ body {
 }
 .hero p {
   margin-top: 15px;
-  font-size: 1.1em;
+  font-size: 1.25rem;
+  opacity: 0.9;
 }
 .btn-hero {
   display: inline-block;
@@ -133,34 +143,27 @@ body {
   box-shadow: 0 5px 12px rgba(0,0,0,0.2);
 }
 
-/* Header */
-header {
-  background: linear-gradient(145deg, #f7d774, #d6b93a);
-  padding: 15px;
-  text-align: center;
-  border-radius: 8px;
-  margin: 20px 0;
-}
-
-/* À propos Section */
+/* =======================
+   Sections & Cards
+======================= */
 .apropos-section {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 40px;
 }
-.apropos-panel {
-  flex: 1;
-  padding: 25px;
+.apropos-panel, .card, .pack {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 20px;
-  line-height: 1.6;
-  background: linear-gradient(135deg, #fdfdfd, #e9eef3);
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  padding: 25px;
 }
-.apropos-panel:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.apropos-panel:hover, .card:hover, .pack:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
 .right-panel {
   background: linear-gradient(135deg, #f4f4f4, #e1e5ea);
@@ -171,159 +174,44 @@ header {
   font-weight: 600;
 }
 
-/* Fade-in animation */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Packs Section */
-.section-title {
-  margin-bottom: 20px;
-}
+/* =======================
+   Packs
+======================= */
 .packs {
   display: flex;
-  gap: 15px;
   flex-wrap: wrap;
-  margin-top: 15px;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
 .pack {
-  flex: 1;
-  border-radius: 12px;
-  padding: 25px;
-  text-align: center;
+  flex: 1 1 300px;
+  max-width: 320px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
-.pack:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 .pack-content h3 {
-  margin-bottom: 10px;
-  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
-
-/* Pack colors */
-#packA {
-  background: linear-gradient(145deg, #ffffff, #eaeaea);
+.pack-content p {
+  margin: 0.4rem 0;
 }
-#packB {
-  background: linear-gradient(145deg, #f6f6f6, #d4d4d4);
+.price {
+  font-weight: bold;
+  color: #007B8A;
+  font-size: 1rem;
 }
+#packA { background: linear-gradient(145deg, #ffffff, #eaeaea); }
+#packB { background: linear-gradient(145deg, #f6f6f6, #d4d4d4); }
 #packC {
   background: linear-gradient(145deg, #f7d774, #d8b63f);
   color: #2a2a2a;
   font-weight: 600;
 }
 
-/* Pack Details */
-.pack-details {
-  margin-top: 25px;
-  background: #eef2f7;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #ccc;
-}
-.hidden {
-  display: none;
-}
-
-/* Aside */
-aside {
-  flex: 1;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 15px;
-}
-.video-container {
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid #ddd;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 40px;
-  padding: 20px;
-  background-color: #111;
-  color: white;
-  border-radius: 10px;
-  font-size: 0.95em;
-}
-
-.footer a {
-  color: #007B8A;
-  text-decoration: none;
-}
-
-.social-icons {
-  margin-top: 1rem;
-}
-
-.social-icons a {
-  margin: 0 0.5rem;
-  font-size: 1.4rem;
-  color: #007B8A;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #005f6b;
-}
-
-.hero-video {
-  position: relative;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 15px;
-  margin-bottom: 30px;
-}
-
-.bg-video {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1;
-}
-
-.hero-video .hero-text {
-  position: relative;
-  z-index: 2;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.hero-video h2 {
-  font-size: 2em;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.hero-video p {
-  font-size: 1.1em;
-}
-
+/* =======================
+   Modale
+======================= */
 .modal {
   display: none;
   position: fixed;
@@ -334,84 +222,26 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
 .modal-content {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
+  background: #fff;
+  color: #222;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+  animation: fadeIn 0.4s ease;
   max-width: 500px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
-
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
 .modal-actions {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 15px;
 }
-
-/* Coupe d’Afrique – Réservation */
-.card h3 {
-  font-size: 1.6em;
-  font-weight: 700;
-  color: #006837; /* vert CAN */
-  margin-bottom: 10px;
-}
-
-.card input,
-.card select,
-.card textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
-  font-family: "Poppins", sans-serif;
-}
-
-.card label {
-  font-weight: 600;
-  color: #d21034; /* rouge CAN */
-}
-
-.card .btn-hero {
-  background: linear-gradient(145deg, #fcd116, #d21034); /* jaune → rouge */
-  color: white;
-  font-weight: bold;
-  border-radius: 30px;
-  padding: 12px 28px;
-  transition: 0.3s;
-}
-
-.card .btn-hero:hover {
-  background: linear-gradient(145deg, #d21034, #fcd116);
-  transform: scale(1.05);
-  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
-}
-
-/* Modale Coupe d’Afrique */
-.modal-content {
-  background: linear-gradient(135deg, #006837, #fcd116); /* vert → jaune */
-  color: white;
-  border-radius: 16px;
-  padding: 30px;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-}
-
-.modal-content h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.modal-content p {
-  font-size: 1.1em;
-  margin-bottom: 20px;
-}
-
 .modal-actions button {
   font-size: 1em;
   padding: 10px 20px;
@@ -420,83 +250,46 @@ footer {
   border: none;
   cursor: pointer;
 }
-
 #confirmSend {
   background-color: #d21034;
   color: #fff;
 }
-
 #cancelSend {
   background-color: #fff;
   color: #333;
 }
 
-.carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 20px;
-  padding: 10px 0;
-}
-.slide {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  width: 300px;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  background: #fff;
-  padding: 15px;
+/* =======================
+   Footer & Social
+======================= */
+footer {
   text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #111;
+  color: white;
+  border-radius: 10px;
+  font-size: 0.95em;
 }
-.slide img,
-.slide video {
-  width: 100%;
-  border-radius: 8px;
-}
-.slide h3 {
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.packs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.pack {
-  flex: 1 1 300px;
-  max-width: 320px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  padding: 1.2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.pack:hover {
-  transform: translateY(-5px);
-}
-
-.pack-content h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.pack-content p {
-  margin: 0.4rem 0;
-}
-
-.price {
-  font-weight: bold;
+.footer a {
   color: #007B8A;
-  font-size: 1rem;
+  text-decoration: none;
 }
-
-/* Responsive tweaks */
+.social-icons {
+  margin-top: 1rem;
+}
+.social-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.4rem;
+  color: #007B8A;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: #005f6b;
+}
+/* =======================
+   Responsive Design
+======================= */
 @media (max-width: 600px) {
   .packs {
     flex-direction: column;
@@ -515,6 +308,9 @@ footer {
     font-size: 1rem;
   }
 }
+/* =======================
+   WhatsApp Banner
+======================= */
 .whatsapp-banner {
   position: fixed;
   bottom: 20px;
@@ -539,4 +335,130 @@ footer {
 
 .whatsapp-banner i {
   font-size: 1.2rem;
+}
+
+/* =======================
+   Formulaire de réservation
+======================= */
+form {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #d21034; /* rouge CAN */
+  font-size: 0.95rem;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #fdfdfd;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #007B8A;
+  outline: none;
+}
+
+form .btn-hero {
+  display: inline-block;
+  background: linear-gradient(145deg, #fcd116, #d21034); /* jaune → rouge */
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
+
+form .btn-hero:hover {
+  background: linear-gradient(145deg, #d21034, #fcd116);
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+/* =============
+    slide
+=============*/
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+.slide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  background: #fff;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.slide:hover {
+  transform: translateY(-5px);
+}
+
+.slide img,
+.slide video {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.slide h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.slide p {
+  font-size: 0.95rem;
+  color: #444;
+}
+.slide-gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  scroll-behavior: smooth;
+}
+
+.slide-gallery img {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 12px;
+  scroll-snap-align: start;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
