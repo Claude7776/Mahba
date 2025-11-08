@@ -5,23 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nous Contacter - Location Chauffeur</title>
   <link rel="stylesheet" href="/styles/styles.css" />
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggle = document.getElementById("menuToggle");
-      const navList = document.getElementById("navList");
-      toggle.addEventListener("click", () => {
-        navList.classList.toggle("open");
-      });
-
-      const fadeElements = document.querySelectorAll(".fade-in");
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
-        });
-      });
-      fadeElements.forEach((el) => observer.observe(el));
-    });
-  </script>
 </head>
 <body>
   <!-- Top Section with Logo -->
@@ -35,8 +18,7 @@
     <ul id="navList">
       <li><a href="index.html">Accueil</a></li>
       <li><a href="activité.html">Activités et Loisirs</a></li>
-      <li><a href="hébergement.html  
-            ">Hébergement</a></li>
+      <li><a href="hébergement.html">Hébergement</a></li>
       <li><a href="contact.html" class="active">Nous Contacter</a></li>
     </ul>
   </nav>
@@ -80,57 +62,9 @@
       ></iframe>
     </div>
   </section>
+
   <!-- Header -->
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("whatsappForm");
-    const modal = document.getElementById("confirmationModal");
-    const messagePreview = document.getElementById("messagePreview");
-    const confirmSend = document.getElementById("confirmSend");
-    const cancelSend = document.getElementById("cancelSend");
-
-    let whatsappURL = "";
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const nom = document.getElementById("nom").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const date = document.getElementById("date").value;
-
-      if (!nom || !email || !date) {
-        alert("Veuillez remplir tous les champs.");
-        return;
-      }
-
-      const message = `Bonjour, je souhaite réserver avec les informations suivantes :
-Nom : ${nom}
-Email : ${email}
-Date d’arrivée : ${date}
-Date de retour : ${document.getElementById("date-retour").value}
-Type d’hébergement : ${document.getElementById("hebergement").value}`;
-
-      const phone = "212690565512";
-      whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
-      messagePreview.textContent = message;
-      modal.style.display = "flex";
-    });
-
-    confirmSend.addEventListener("click", function () {
-      window.open(whatsappURL, "_blank");
-      modal.style.display = "none";
-    });
-
-    cancelSend.addEventListener("click", function () {
-      modal.style.display = "none";
-    });
-  });
-</script>  <header class="header-hero">
-    <script>
-      const header = document.querySelector('.header-hero');
-      header.style.backgroundImage = "url('/styles/images/hero-bg.jpg')";
-</script>
+  <header class="header-hero">
     <h1>Mahba Chauffeur Privé</h1>
     <p>Découvrez le meilleur du tourisme avec Location Chauffeur</p>
   </header>
@@ -151,7 +85,7 @@ Type d’hébergement : ${document.getElementById("hebergement").value}`;
   <!-- Main Content -->
   <main class="content">
     <section class="card fade-in">
-      <h3>Nos meilleurs Chauffeurs Vous accompagne tout au long de votre voyage</h3>
+      <h3>Nos meilleurs Chauffeurs vous accompagnent tout au long de votre voyage</h3>
       <p>Partout où vous allez, nos chauffeurs sont là pour vous.</p>
     </section>
 
@@ -165,75 +99,66 @@ Type d’hébergement : ${document.getElementById("hebergement").value}`;
       </ul>
     </section>
 
-   <section class="card fade-in">
- <section class="card fade-in">
-  <h3>📅 Réserver maintenant</h3>
-  <form id="whatsappForm">
-    <label for="nom">Nom complet :</label><br>
-    <input type="text" id="nom" name="nom" required><br><br>
+    <section class="card fade-in">
+      <h3>📅 Réserver maintenant</h3>
+      <form id="whatsappForm">
+        <label for="nom">Nom complet :</label><br>
+        <input type="text" id="nom" name="nom" required><br><br>
 
-    <label for="email">Email :</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+        <label for="email">Email :</label><br>
+        <input type="email" id="email" name="email" required><br><br>
 
-    <label for="date">Date d’arrivée :</label><br>
-    <input type="date" id="date" name="date" required><br><br>
+        <label for="date">Date d’arrivée :</label><br>
+        <input type="date" id="date" name="date" required><br><br>
 
-    <label for="date-retour">Date de retour :</label><br>
-    <input type="date" id="date-retour" name="date-retour" required><br><br>
+        <label for="date-retour">Date de retour :</label><br>
+        <input type="date" id="date-retour" name="date-retour" required><br><br>
 
-    <label for="hebergement">Type d’hébergement :</label><br>
-    <select id="hebergement" name="hebergement" required>
-      <option value="standard">Standard</option>
-      <option value="familial">Familial</option>
-      <option value="prestige">Prestige</option>
-    </select><br><br>
-    <button type="submit" class="btn-hero">Envoyer sur WhatsApp</button>
-  </form>
-</section>
+        <label for="hebergement">Type d’hébergement :</label><br>
+        <select id="hebergement" name="hebergement" required>
+          <option value="standard">Standard</option>
+          <option value="familial">Familial</option>
+          <option value="prestige">Prestige</option>
+        </select><br><br>
+        <button type="submit" class="btn-hero">Envoyer sur WhatsApp</button>
+      </form>
+    </section>
 
-<!-- Modale de confirmation -->
-<div id="confirmationModal" class="modal">
-  <div class="modal-content">
-    <h3>Confirmer l’envoi</h3>
-    <p id="messagePreview"></p>
-    <div class="modal-actions">
-      <button id="confirmSend" class="btn-hero">Oui, envoyer</button>
-      <button id="cancelSend" class="btn-hero" style="background:#ccc; color:#333;">Annuler</button>
+    <!-- Modale de confirmation -->
+    <div id="confirmationModal" class="modal">
+      <div class="modal-content">
+        <h3>Confirmer l’envoi</h3>
+        <p id="messagePreview"></p>
+        <div class="modal-actions">
+          <button id="confirmSend" class="btn-hero">Oui, envoyer</button>
+          <button id="cancelSend" class="btn-hero" style="background:#ccc; color:#333;">Annuler</button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   </main>
 
   <!-- Footer -->
   <footer class="footer">
-  <p>© 2025 Location Chauffeur - Explorez, découvrez, voyagez avec nous.</p>
-  <p>Votre partenaire de confiance pour des trajets inoubliables à travers le Maroc.</p>
-  <p>Des packs adaptés à chaque besoin : confort urbain, escapades familiales ou expériences haut de gamme.</p>
-  <p>📞 <a href="tel:+212600000000">+212 6 00 00 00 00</a> | 📧 <a href="mailto:contact@locationchauffeur.ma">contact@locationchauffeur.ma</a></p>
-  <p>📍 Basés à Rabat, nous desservons toutes les grandes villes et régions touristiques.</p>
+    <p>© 2025 Location Chauffeur - Explorez, découvrez, voyagez avec nous.</p>
+    <p>Votre partenaire de confiance pour des trajets inoubliables à travers le Maroc.</p>
+    <p>Des packs adaptés à chaque besoin : confort urbain, escapades familiales ou expériences haut de gamme.</p>
+    <p>📞 <a href="tel:+212600000000">+212 6 00 00 00 00</a> | 📧 <a href="mailto:contact@locationchauffeur.ma">contact@locationchauffeur.ma</a></p>
+    <p>📍 Basés à Rabat, nous desservons toutes les grandes villes et régions touristiques.</p>
 
-  <div class="social-icons">
-    <a href="https://www.facebook.com/locationchauffeur" target="_blank" aria-label="Facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.instagram.com/locationchauffeur" target="_blank" aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://wa.me/212600000000" target="_blank" aria-label="WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-  </div>
-</footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/locationchauffeur" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/locationchauffeur" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/212600000000" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </footer>
 
-  <!-- Fade-in animation script -->
-  <script>
-    const fadeElements = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.1 });
-    fadeElements.forEach(el => observer.observe(el));
-  </script>
+  <!-- Script externe -->
+  <script src="/scripts/contact.js" defer></script>
 </body>
 </html>

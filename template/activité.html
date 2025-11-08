@@ -64,30 +64,30 @@
     </div>
   </section>
 
-  <!-- Galerie Photo -->
   <section>
-    <h3 class="section-title">Galerie</h3>
-    <div class="packs">
-      <div class="pack" id="packA">
-        <div class="pack-content">
-          <h3>Panorama Urbain</h3>
-          <img src="galerie1.jpg" alt="Ville" style="width:100%; border-radius:8px;" />
-        </div>
-      </div>
-      <div class="pack" id="packB">
-        <div class="pack-content">
-          <h3>Nature & Détente</h3>
-          <img src="galerie2.jpg" alt="Nature" style="width:100%; border-radius:8px;" />
-        </div>
-      </div>
-      <div class="pack" id="packC">
-        <div class="pack-content">
-          <h3>Événementiel</h3>
-          <img src="galerie3.jpg" alt="Événement" style="width:100%; border-radius:8px;" />
-        </div>
-      </div>
+  <h3 class="section-title">Galerie</h3>
+  <div class="carousel">
+    <div class="slide">
+      <h3>Panorama Urbain</h3>
+      <img src="/styles/images/rabat-private-day-trip.jpg" alt="Ville" />
     </div>
-  </section>
+    <div class="slide">
+      <h3>Nature & Détente</h3>
+      <img src="/styles/images/nature-wildlife-trips-in-morocco-1200x675.png" alt="Nature" />
+    </div>
+    <div class="slide">
+      <h3>Événementiel</h3>
+      <img src="/styles/images/afcon25_logo_poster-1024x576-1.jpg" alt="Événement" />
+    </div>
+    <div class="slide">
+      <h3>Excursion Vidéo</h3>
+      <video autoplay muted loop playsinline>
+        <source src="/styles/images/vidéo/8345154-uhd_2160_3840" type="video/mp4" />
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+    </div>
+  </div>
+</section>
 
   <!-- Carte Interactive -->
   <section style="margin-top:40px;">
@@ -111,10 +111,37 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Location Chauffeur. Tous droits réservés.
-  </footer>
+   <!-- Footer -->
+  <footer class="footer">
+  <p>© 2025 Location Chauffeur - Explorez, découvrez, voyagez avec nous.</p>
+  <p>Votre partenaire de confiance pour des trajets inoubliables à travers le Maroc.</p>
+  <p>Des packs adaptés à chaque besoin : confort urbain, escapades familiales ou expériences haut de gamme.</p>
+  <p>📞 <a href="tel:+212600000000">+212 6 00 00 00 00</a> | 📧 <a href="mailto:contact@locationchauffeur.ma">contact@locationchauffeur.ma</a></p>
+  <p>📍 Basés à Rabat, nous desservons toutes les grandes villes et régions touristiques.</p>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com/locationchauffeur" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/locationchauffeur" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/212600000000" target="_blank" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+</footer>
+
+  <!-- Fade-in animation script -->
+  <script>
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
