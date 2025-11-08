@@ -462,3 +462,54 @@ form .btn-hero:hover {
   object-fit: cover;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
+//* Voir plus / Voir moins */
+.desc-block { max-width: 720px; margin: 0.9rem 0; }
+.desc-text {
+  overflow: hidden;
+  transition: max-height 320ms cubic-bezier(.2,.8,.2,1), opacity 220ms ease;
+  max-height: 4.6rem; /* hauteur réduite (≈3 lignes) */
+  opacity: 1;
+  position: relative;
+}
+
+/* petit dégradé indicateur */
+.desc-text::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height:2.2rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0), rgba(249,249,249,1));
+  pointer-events:none;
+}
+
+/* état ouvert (JS règle la hauteur réelle) */
+.desc-text.open{
+  max-height: 1000px; /* fallback si JS non présent */
+}
+.desc-text.open::after{ display:none; }
+
+/* bouton */
+.toggle-desc{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  margin-top:.6rem;
+  background:transparent;
+  border:1px solid #d0d0d0;
+  padding:.45rem .8rem;
+  border-radius:999px;
+  font-weight:600;
+  cursor:pointer;
+  transition:background .16s ease, transform .12s ease;
+}
+.toggle-desc:hover{ background: rgba(0,0,0,0.04); transform:translateY(-1px) }
+
+/* accessible focus */
+.toggle-desc:focus{ outline:2px solid rgba(0,123,138,0.18); outline-offset:3px }
+
+/* responsive tweak */
+@media (max-width:480px){
+  .desc-text{ max-height:6.2rem } /* show ~4 lines on very small screens */
+}
+
