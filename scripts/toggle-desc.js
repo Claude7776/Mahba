@@ -30,7 +30,7 @@
     if (!btn || btn.__toggleInit) return;
     btn.__toggleInit = true;
 
-    // keyboard support: Enter / Spa
+    // keyboard support: Enter / Space
     btn.addEventListener('keydown', function (ev) {
       if (ev.key === 'Enter' || ev.key === ' ') {
         ev.preventDefault();
