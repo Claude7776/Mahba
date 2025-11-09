@@ -26,20 +26,53 @@
   </nav>
 
   <!-- Header -->
-  <header class="header-hero"></header>
-
-  <!-- Hero Section with Video Background -->
-  <section class="hero-video">
-    <video autoplay muted loop playsinline class="bg-video">
-      <source src="/styles/images/vidéo/" type="video/mp4" />
-      Votre navigateur ne supporte pas la vidéo HTML5.
-    </video>
+  <header class="hero-accom animate-on-visible" role="banner" aria-label="Hébergement et services">
+  <div class="hero-media">
+    <img src="/styles/images/chambre_vue.jpg" alt="Chambre élégante avec vue" class="hero-bg" />
     <div class="overlay"></div>
-    <div class="hero-text">
-      <h2>Hébergement & Services</h2>
-      <p>Confort, élégance et sérénité pour chaque étape de votre voyage.</p>
+  </div>
+
+  <div class="hero-content container">
+    <div class="hero-left animate-item">
+      <h1 class="hero-title">Hébergement & Services</h1>
+      <p class="hero-sub">
+        Confort, élégance et sérénité pour chaque étape de votre voyage. Choisissez parmi nos sélections d'hôtels partenaires, appartements privés et formules sur‑mesure — transferts, conciergerie 24/7 et expériences exclusives inclus.
+      </p>
+
+      <div class="hero-ctas">
+       <!--- <a class="btn primary" href="#rooms">Voir les offres</a> -->
+        <!--- <a class="btn ghost" href="#services">Nos services</a> -->
+      </div>
+
+      <ul class="hero-features" aria-hidden="false">
+        <li><strong>Transferts inclus</strong> — accueil VIP à l'aéroport</li>
+        <li><strong>Conciergerie 24/7</strong> — réservations & assistance</li>
+        <li><strong>Options flexibles</strong> — famille, solo, groupes</li>
+      </ul>
     </div>
-  </section>
+
+    <aside class="hero-card animate-item" aria-hidden="true">
+      <div class="price-badge">
+        <span class="price">À partir de</span>
+        <strong class="amount">120€</strong>
+        <small class="per">/ nuit</small>
+      </div>
+
+      <div class="card-meta">
+        <svg class="icon" viewBox="0 0 24 24" width="34" height="34" aria-hidden="true">
+          <path fill="currentColor" d="M12 2L2 7v7c0 5 4 9 10 9s10-4 10-9V7l-10-5zM12 12a3 3 0 100-6 3 3 0 000 6z"/>
+        </svg>
+        <div>
+          <div class="card-title">Pack Confort</div>
+          <div class="card-sub">Petit-déjeuner + transfert</div>
+        </div>
+      </div>
+
+      <a class="btn small" href="https://wa.me/212690565512">Réserver dès maintenant !!!</a>
+    </aside>
+  </div>
+</header>
+
 
   <!-- Main Content -->
   <main class="content">
@@ -120,5 +153,6 @@
 
   <!-- Script externe -->
   <script src="/scripts/hébergement.js" defer></script>
+  <script src="/scripts/anime.js" defer></script>
 </body>
 </html>
