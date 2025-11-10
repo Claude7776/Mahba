@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Activités et Loisirs - Location Chauffeur</title>
+  <title>Activités et Loisirs - Mahba</title>
   <link rel="stylesheet" href="/styles/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script>
@@ -81,6 +81,7 @@
         <img src="/styles/images/accueil-la-mamounia-vue-drone.jpeg" alt="Visite 1" />
         <img src="/styles/images/rabat-private-day-trip.jpg" alt="Visite 2" />
         <img src="/styles/images/nature-wildlife-trips-in-morocco-1200x675.png" alt="Visite 3" />
+        <img src="/styles/images/desert-of-merzouga-nature-morocco-800x450.webp" alt="Visite 4" />
       </div>
       <article class="desc-block">
       <h3>Visites Guidées</h3>
@@ -99,6 +100,7 @@
     <div class="slide-gallery">
       <img src="/styles/images/afcon25_logo_poster-1024x576-1.jpg" alt="Événement 1" />
       <img src="/styles/images/stadeMoulay.jpeg" alt="Événement 2" />
+      <img src="/styles/images/stadeMoulayExt.jpeg" alt="Événement 3" />
     </div>
 
     <article class="desc-block">
@@ -138,25 +140,23 @@
 
 
 
-  <!-- Carte Interactive -->
-  <section style="margin-top:40px;">
-    <h3 class="section-title">Localisation</h3>
-    <div class="video-container">
-      <!-- wrapper responsive -->
-<div class="map-embed">
-  <iframe
-    title="Vue satellite"
-    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d0!2d-6.849813!3d34.020882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sma!4v0000000000000"
-    width="50"
-    height="40"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    sandbox="allow-scripts allow-same-origin allow-popups"
-    aria-label="Carte satellite"
-  ></iframe>
-</div>
+  <section class="region-card fade-in" aria-label="Régions desservies">
+  <h2><strong>📍 Régions où nous opérons</strong></h2>
+  <p><strong>Nous desservons les principales villes et régions touristiques du Maroc</strong>, avec un service fiable et ponctuel.</p>
+
+  <div class="region-list">
+    <ul>
+      <li><strong>Rabat</strong> – Siège principal, départs quotidiens</li>
+      <li><strong>Casablanca</strong> – Transferts aéroport et business</li>
+      <li><strong>Marrakech</strong> – Circuits touristiques et hôtels</li>
+      <li><strong>Fès</strong> – Patrimoine culturel et visites guidées</li>
+      <li><strong>Tanger</strong> – Transferts portuaires et excursions</li>
+      <li><strong>Agadir</strong> – Séjours balnéaires et navettes</li>
+      <li><strong>Chefchaouen</strong> – Escapades en montagne</li>
+      <li><strong>Ouarzazate</strong> – Circuits désert et cinéma</li>
+    </ul>
+  </div>
+</section>
 
     </div>
   </section>
@@ -202,7 +202,7 @@
       });
     }, { threshold: 0.1 });
     fadeElements.forEach(el => observer.observe(el));
-  </script>
+  </script> 
 <script src="/scripts/toggle-desc.js" defer></script>
 </body>
 </html>
