@@ -32,5 +32,5 @@ Bienvenue sur le dépôt du site vitrine touristique **Location Chauffeur**. Ce 
 - Docker (pour déploiement à l'avenir)
 - Whatsapp API (pour les messages)
 - Google Maps Embed API
-
+- QrCode redirection vers une discussion whastapp
 ## 📂 Structure du projet
