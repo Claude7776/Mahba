@@ -1,0 +1,26 @@
+[
+  {
+    "stadium": "Stade Prince Moulay Abdellah – Rabat",
+    "matches": [
+      { "date": "2025-12-21", "event": "Ouverture : Maroc vs Comores" },
+      { "date": "2025-12-28", "event": "Match Groupe A" },
+      { "date": "2026-01-18", "event": "Finale" }
+    ]
+  },
+  {
+    "stadium": "Stade Mohammed V – Casablanca",
+    "matches": [
+      { "date": "2025-12-22", "event": "Match Groupe B" },
+      { "date": "2025-12-30", "event": "Match Groupe B" },
+      { "date": "2026-01-10", "event": "Quart de finale" }
+    ]
+  },
+  {
+    "stadium": "Grand Stade de Marrakech",
+    "matches": [
+      { "date": "2025-12-23", "event": "Match Groupe C" },
+      { "date": "2026-01-02", "event": "Match Groupe C" },
+      { "date": "2026-01-12", "event": "Demi-finale" }
+    ]
+  }
+]
