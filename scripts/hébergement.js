@@ -67,3 +67,13 @@ Type d’hébergement : ${hebergement}`;
     header.style.backgroundImage = "url('/styles/images/hero-bg.jpg')";
   }
 });
+
+document.querySelectorAll('.toggle-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.hebergement-card');
+    card.classList.toggle('expanded');
+    const expanded = card.classList.contains('expanded');
+    btn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+    btn.setAttribute('aria-expanded', expanded);
+  });
+});
