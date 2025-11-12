@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activités et Loisirs - Mahba</title>
+  <link rel="stylesheet" href="/Site/styles/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.getElementById("menuToggle");
+      const navList = document.getElementById("navList");
+      toggle.addEventListener("click", () => {
+        navList.classList.toggle("open");
+      });
+
+      const fadeElements = document.querySelectorAll(".fade-in");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      });
+      fadeElements.forEach((el) => observer.observe(el));
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Top Section with Logo -->
+  <div class="top-section">
+    <img src="/Site/styles/images/logo.png" alt="Logo" class="logo" />
+  </div>
+
+  <!-- Navigation Section -->
+  <nav class="navigation">
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    <ul id="navList">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="activité.html" class="active">Activités et Loisirs</a></li>
+      <li><a href="hébergement.html">Hébergement</a></li>
+      <li><a href="contact.html">Nous Contacter</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+ <header class="hero-header">
+  <div class="hero-inner container">
+    <div class="hero-left">
+      <h1 class="hero-title">Activités et Loisirs</h1>
+      <p class="hero-sub">
+        Découvrez une sélection d’expériences pensées pour sublimer votre séjour : circuits privés avec chauffeurs bilingues, soirées VIP après les matchs, excursions nature vers dunes et montagnes, et ateliers culinaires pour une immersion authentique. Chaque activité est personnalisée, coordonnée (transferts, timing, accès privilégiés) et accompagnée d’un service 24/7 pour garantir confort, sécurité et moments inoubliables.
+      </p>
+
+      <div class="hero-ctas">
+        <a class="btn primary" href="https://wa.me/212690565512">Réserver maintenant</a>
+       <!--- <a class="btn ghost" href="#activities">Voir les activités</a> -->
+      </div>
+    </div>
+
+    <div class="hero-right" aria-hidden="true">
+      <div class="hero-card">
+        <svg class="icon-spot" width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2v20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M2 12h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div class="meta">
+          <strong>Pack VIP</strong>
+          <span>Transferts + Soirées + Guide</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <section>
+  <h3 class="section-title">Activités</h3>
+  <div class="carousel">
+    <div class="slide">
+      <div class="slide-gallery">
+        <img src="/Site/styles/images/accueil-la-mamounia-vue-drone.jpeg" alt="Visite 1" />
+        <img src="/Site/styles/images/rabat-private-day-trip.jpg" alt="Visite 2" />
+        <img src="/Site/styles/images/nature-wildlife-trips-in-morocco-1200x675.png" alt="Visite 3" />
+        <img src="/Site/styles/images/desert-of-merzouga-nature-morocco-800x450.webp" alt="Visite 4" />
+      </div>
+      <article class="desc-block">
+      <h3>Visites Guidées</h3>
+
+      <div class="desc-text" id="desc-3" aria-hidden="true">
+        <p>
+          Explorez les plus beaux sites touristiques du Maroc en toute sérénité avec nos chauffeurs expérimentés. De la médina de Fès aux remparts de Marrakech, en passant par les jardins andalous de Rabat ou les dunes de Merzouga, chaque itinéraire est personnalisé selon vos envies. Nos circuits incluent des pauses culturelles, des haltes gastronomiques et des panoramas inoubliables. Profitez d'un service privé, ponctuel et bilingue pour découvrir le patrimoine marocain à votre rythme.
+        </p>
+      </div>
+
+      <button class="toggle-desc" aria-controls="desc-3" aria-expanded="false">Voir plus</button>
+    </article>
+  </div>
+
+  <div class="slide">
+    <div class="slide-gallery">
+      <img src="/Site/styles/images/afcon25_logo_poster-1024x576-1.jpg" alt="Événement 1" />
+      <img src="/Site/styles/images/stadeMoulay.jpeg" alt="Événement 2" />
+      <img src="/Site/styles/images/stadeMoulayExt.jpeg" alt="Événement 3" />
+    </div>
+
+    <article class="desc-block">
+      <h3>CAN MOROCCO 2025</h3>
+
+      <div class="desc-text" id="desc-1" aria-hidden="true">
+        <p>
+          La Coupe d'Afrique des Nations 2025 transforme le Maroc en une scène vibrante de passion, de culture et de festivités. Rabat, Casablanca, Marrakech et d'autres villes hôtes accueillent supporters et voyageurs dans une ambiance électrique mêlant football, musique, gastronomie et traditions locales. Nos services vous accompagnent au cœur de cette effervescence : transferts vers les stades, soirées privées, visites guidées thématiques et accès privilégié aux événements officiels. Vivez chaque instant de la CAN comme une célébration inoubliable.
+        </p>
+      </div>
+
+      <button class="toggle-desc" aria-controls="desc-1" aria-expanded="false">Voir plus</button>
+    </article>
+  </div>
+
+  <div class="slide">
+    <div class="slide-gallery">
+      <img src="/Site/styles/images/club555.webp" alt="Soirée 1" />
+      <img src="/Site/styles/images/club66.jpeg" alt="Soirée 2" />
+    </div>
+
+    <article class="desc-block">
+      <h3>Soirées après chaque match</h3>
+
+      <div class="desc-text" id="desc-2" aria-hidden="true">
+        <p>
+          Prolongez l'euphorie des matchs avec nos soirées privées organisées chaque soir de la CAN 2025. Dans des lieux sélectionnés à Rabat, Casablanca, Marrakech et d'autres villes hôtes, vivez des moments festifs mêlant musique live, DJ sets, gastronomie marocaine et ambiance panafricaine. Nos chauffeurs vous y conduisent en toute sécurité, et nos partenaires vous réservent un accueil VIP.
+        </p>
+      </div>
+
+      <button class="toggle-desc" aria-controls="desc-2" aria-expanded="false">Voir plus</button>
+    </article>
+  </div>
+  </div>
+</section>
+
+
+
+
+  <section class="region-card fade-in" aria-label="Régions desservies">
+  <h2><strong>📍 Régions où nous opérons</strong></h2>
+  <p><strong>Nous desservons les principales villes et régions touristiques du Maroc</strong>, avec un service fiable et ponctuel.</p>
+
+  <div class="region-list">
+    <ul>
+      <li><strong>Rabat</strong> – Siège principal, départs quotidiens</li>
+      <li><strong>Casablanca</strong> – Transferts aéroport et business</li>
+      <li><strong>Marrakech</strong> – Circuits touristiques et hôtels</li>
+      <li><strong>Fès</strong> – Patrimoine culturel et visites guidées</li>
+      <li><strong>Tanger</strong> – Transferts portuaires et excursions</li>
+      <li><strong>Agadir</strong> – Séjours balnéaires et navettes</li>
+      <li><strong>Chefchaouen</strong> – Escapades en montagne</li>
+      <li><strong>Ouarzazate</strong> – Circuits désert et cinéma</li>
+    </ul>
+  </div>
+</section>
+
+    </div>
+  </section>
+
+  <!-- Contact Direct -->
+  <section style="margin-top:40px;">
+    <h3 class="section-title">Réserver une activité</h3>
+    <div class="apropos-panel fade-in" style="text-align:center;">
+      <p>Contactez-nous directement pour réserver ou poser vos questions :</p>
+      <a href="https://wa.me/212690565512" target="_blank" class="btn-hero" style="margin:10px;">📱 WhatsApp</a>
+      <a href="tel:+212690565512" class="btn-hero" style="margin:10px;">📞 Appeler</a>
+      <a href="mailto:contact@locationchauffeur.ma" class="btn-hero" style="margin:10px;">✉️ Email</a>
+    </div>
+  </section>
+
+   <!-- footer -->
+  <footer class="footer">
+  <p>© 2025 Mahba — <em>Explorez, découvrez, voyagez avec nous.</em></p>
+  <p>Votre partenaire de confiance pour des trajets inoubliables à travers le Maroc.</p>
+  <p>Des packs adaptés à chaque besoin : confort urbain, escapades familiales ou expériences haut de gamme.</p>
+
+  <address>
+    <p>
+      📞 <a href="tel:+212600000000" aria-label="Appeler Location Chauffeur">+212 6 00 00 00 00</a> |
+      📧 <a href="mailto:contact@locationchauffeur.ma" aria-label="Envoyer un e-mail à Location Chauffeur">contact@locationchauffeur.ma</a>
+    </p>
+    <p>📍 Basés à Rabat, nous desservons toutes les grandes villes et régions touristiques.</p>
+  </address>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com/locationchauffeur" target="_blank" rel="noopener noreferrer" aria-label="Page Facebook Location Chauffeur">
+      <i class="fab fa-facebook-f" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.instagram.com/locationchauffeur" target="_blank" rel="noopener noreferrer" aria-label="Profil Instagram Location Chauffeur">
+      <i class="fab fa-instagram" aria-hidden="true"></i>
+    </a>
+    <a href="https://wa.me/212600000000" target="_blank" rel="noopener noreferrer" aria-label="Contacter via WhatsApp">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+  </div>
+</footer>
+
+  <!-- Fade-in animation script -->
+  <script>
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    fadeElements.forEach(el => observer.observe(el));
+  </script> 
+<script src="/Site/scripts/toggle-desc.js" defer></script>
+</body>
+</html>
