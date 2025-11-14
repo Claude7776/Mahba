@@ -6,7 +6,7 @@ body {
   background: #d0d0d0;
   color: #2a2a2a;
   padding: 0 clamp(1rem, 5vw, 80px);
-  line-height: 1.6;a
+  line-height: 1.6.a;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
